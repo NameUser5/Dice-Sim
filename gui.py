@@ -1,7 +1,7 @@
 from tkinter import *
 import random
 
-count = 0
+count = 0   #remember for a variable to be global, it needs to exist OUTSIDE of the class/function/file!
 
 class GUI():
     def __init__(self):
