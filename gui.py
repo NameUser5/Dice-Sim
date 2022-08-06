@@ -71,7 +71,7 @@ class GUI():
                                                                             # does not matter in a class :)
 
         self.update_count(user_click)
-        print(count)
+        print(f"{count}\n")
 
     def update_dice(self, user_click, result= 10):
         if user_click == 'y':

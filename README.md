@@ -44,5 +44,6 @@ Once above program is done, I will try letting the user pick their dice style/co
    3. 2-dice roll, multi-color, with animation
 
 Misc Notes:
-TKDefaultFont
-Toolkit
+1. how to constrict label into specific space?
+2. TKDefaultFont
+3. Toolkit
