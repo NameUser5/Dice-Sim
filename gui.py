@@ -1,13 +1,14 @@
 from tkinter import *
 import random
 
+count = 0
 
 class GUI():
     def __init__(self):
         self.root = Tk()
         self.root.title('Dice Simulator')
 
-        self.root.geometry('575x400')
+        self.root.geometry('580x400')
         self.root.config(bg='#069c71', pady=1, padx=10)
         self.root.resizable(False, False)
 
@@ -17,7 +18,8 @@ class GUI():
         self.banner.grid(row=1, column=3)
 
         ## Secret Banner:
-        self.secret_banner = Label(text="", font=('Segoe UI', 12), pady=3, padx=2, fg='#eac527', bg='#069c71')
+        self.secret_banner = Label(text="", font=('Segoe UI', 12, 'bold'), pady=3, padx=2,
+                                   fg='#eac527', bg='#069c71')
         self.secret_banner.grid(row=4, column=1)
 
         ## Die display:
@@ -56,6 +58,7 @@ class GUI():
 
         self.root.mainloop()
 
+
     ## Roll functions:
     def roll_dice(self, user_click):
         faces = [1, 2, 3, 4, 5, 6]
@@ -67,7 +70,10 @@ class GUI():
         self.update_dice(user_click, result)  #### THIS is what was missing! Remember the order of fxs
                                                                             # does not matter in a class :)
 
-    def update_dice(self, user_click, result = 10):
+        self.update_count(user_click)
+        print(count)
+
+    def update_dice(self, user_click, result= 10):
         if user_click == 'y':
             if result == 1:
                 self.die_display.config(image=self.one)
@@ -83,5 +89,32 @@ class GUI():
                 self.die_display.config(image=self.six)
         else:
             self.die_display.config(image=self.blank)
+
+        self.root.update()
+
+    def update_count(self, user_click):
+        global count
+        if user_click == 'y':
+            count +=1
+
+        if count == 10:
+            self.secret_banner.config(text="Don't you think \n you're \n overdoing this?")
+        elif count == 20:
+            self.secret_banner.config(text="You're definitely \n overdoing this.")
+        elif count == 35:
+            self.secret_banner.config(text="You're not stopping, \n are you?")
+        elif count == 50:
+            self.secret_banner.config(text="Is this a \n different person??")
+        elif count == 55:
+            self.secret_banner.config(text="Do you really have \n a need for this?")
+        elif count == 70:
+            self.secret_banner.config(text="STOP!")
+        elif count == 80:
+            self.secret_banner.config(text="We have no prizes...")
+        elif count == 100:
+            self.secret_banner.config(text="Whatever. Addict. :) \n Here's your \n dopamine hit.")
+        else:
+            self.secret_banner.config(text="")
+
 
         self.root.update()
