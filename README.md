@@ -35,3 +35,14 @@ Once above program is done, I will try letting the user pick their dice style/co
    1. e.g. *when mouse is on cards:* "This isn't poker!"
 3. Add border to window -- like an actual casino table
    1. Can an image/texture be used for this???
+
+###LEVEL UP:
+
+1. Tabs:
+   1. 2-dice roll
+   2. 2-dice roll, multi-color
+   3. 2-dice roll, multi-color, with animation
+
+Misc Notes:
+TKDefaultFont
+Toolkit
