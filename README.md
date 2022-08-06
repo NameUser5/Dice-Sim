@@ -27,3 +27,11 @@ Once above program is done, I will try letting the user pick their dice style/co
 2. tkinter
 3. gui file into main
 4. TBD function file into gui
+
+
+***Additions***
+1. Make elements scale with window if resized
+2. add hover text to inert sprites
+   1. e.g. *when mouse is on cards:* "This isn't poker!"
+3. Add border to window -- like an actual casino table
+   1. Can an image/texture be used for this???
