@@ -14,12 +14,12 @@ class GUI():
 
         ## Banner:
         self.banner = Label(text="Dice Simulator: \n Let it roll!", font=('Monotype Corsiva', 24, 'bold'), pady=3,
-                            padx=2, fg='#eac527', bg='#069c71', borderwidth=3, relief='ridge')
+                            padx=2, fg='#eac527', bg='#069c71', borderwidth=3, relief='ridge') #eac527
         self.banner.grid(row=1, column=3)
 
         ## Secret Banner:
         self.secret_banner = Label(text="", font=('Segoe UI', 12, 'bold'), pady=3, padx=2,
-                                   fg='#eac527', bg='#069c71')
+                                   fg='#ffde59', bg='#069c71')
         self.secret_banner.grid(row=4, column=1)
 
         ## Die display:
