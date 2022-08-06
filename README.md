@@ -1,0 +1,2 @@
+# Dice-Sim
+Dice simulator
