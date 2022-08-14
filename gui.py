@@ -73,6 +73,8 @@ class GUI():
         self.update_count(user_click)
         print(f"{count}\n")
 
+        self.root.update()
+
     def update_dice(self, user_click, result= 10):
         if user_click == 'y':
             if result == 1:
@@ -90,7 +92,6 @@ class GUI():
         else:
             self.die_display.config(image=self.blank)
 
-        self.root.update()
 
     def update_count(self, user_click):
         global count
@@ -115,6 +116,3 @@ class GUI():
             self.secret_banner.config(text="Whatever. Addict. :) \n Here's your \n dopamine hit.")
         else:
             self.secret_banner.config(text="")
-
-
-        self.root.update()
