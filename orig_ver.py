@@ -1,5 +1,4 @@
 from tkinter import *
-from tkinter import ttk
 import random
 
 count = 0   #remember for a variable to be global, it needs to exist OUTSIDE of the class/function/file!
@@ -8,15 +7,6 @@ class GUI():
     def __init__(self):
         self.root = Tk()
         self.root.title('Dice Simulator')
-
-        self.tabs = ttk.Notebook(self.root)
-        self.tabs.grid(row=0, column=1, columnspan=1)
-        self.tab1 = ttk.Frame(self.tabs)
-        self.tab2 = ttk.Frame(self.tabs)
-        self.tab3 = ttk.Frame(self.tabs)
-        self.tabs.add(self.tab1, text="1 Die")
-        self.tabs.add(self.tab2, text="2 Dice")
-        self.tabs.add(self.tab3, text="3 Dice")
 
         self.root.geometry('580x400')
         self.root.config(bg='#069c71', pady=1, padx=10)
@@ -48,7 +38,7 @@ class GUI():
         ## Inert sprites (add hover text-- eg: This isn't poker!):
         self.chips = PhotoImage(file=r'images\chips.png').subsample(3, 3)
         self.chips_label = Label(image=self.chips, bg='#069c71')
-        self.chips_label.grid(row=2, column=1)
+        self.chips_label.grid(row=1, column=1)
 
         self.cigar = PhotoImage(file=r'images\cigar.png').subsample(3, 3)
         self.cigar_label = Label(image=self.cigar, bg='#069c71')
