@@ -2,6 +2,8 @@
 
 https://docs.python.org/3.7/library/tkinter.ttk.html#tkinter.ttk.Notebook.add
 
+https://replit.com/@EvelynBrooks1/Week12?v=1
+
 Dice simulator
 
 ***Pseudocode:***
