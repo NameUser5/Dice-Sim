@@ -28,7 +28,7 @@ class GUI():
         self.banner.grid(row=1, column=3)
 
         ## Secret Banner:
-        self.secret_banner = Label(text="", font=('Segoe UI', 12, 'bold'), pady=3, padx=2,
+        self.secret_banner = Label(text="", font=('Segoe UI', 11, 'bold'), pady=3, padx=2,
                                    fg='#ffde59', bg='#069c71')
         self.secret_banner.grid(row=4, column=1)
 
