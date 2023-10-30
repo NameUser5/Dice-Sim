@@ -44,7 +44,7 @@ Once above program is done, I will try letting the user pick their dice style/co
 ###LEVEL UP:
 
 1. Tabs:
-   1. 2-dice roll
+   1. 2-dice roll --> base code DONE :) Now I must move this to the tab
    2. 2-dice roll, multi-color
    3. 2-dice roll, multi-color, with animation
 
