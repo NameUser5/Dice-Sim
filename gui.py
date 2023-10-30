@@ -5,28 +5,39 @@ from gui_two_dice import GUI2
 
 count = 0   #remember for a variable to be global, it needs to exist OUTSIDE of the class/function/file!
 
+'''Attempted placing the style outside, still does not work'''
+# style = ttk.Style()
+# style.configure("Casino", foreground='#069c71', background='#069c71')
+
 class GUI():
     def __init__(self):
         self.root = Tk()
         self.root.title('Dice Simulator')
         self.root.resizable(False, False)
+        self.root.config(bg='#069c71', pady=1, padx=3)
+        # self.root.geometry('580x400')
+
+        # self.style = ttk.Style()
+        # self.style.configure("Casino", foreground='#069c71', background='#069c71')
 
         self.tabs = ttk.Notebook(self.root, width=580, height=400)
         self.tabs.grid(row=0, column=1, columnspan=1)
-        self.tab1 = ttk.Frame(self.tabs)
+        self.tab1 = ttk.Frame(self.tabs) #(self.tabs, style="Casino")
         self.tab2 = ttk.Frame(self.tabs)
         self.tab3 = ttk.Frame(self.tabs)
         self.tabs.add(self.tab1, text="1 Die")
         self.tabs.add(self.tab2, text="2 Dice", image='images\2.png')
         self.tabs.add(self.tab3, text="3 Dice", state="disabled")
 
-        background_image = PhotoImage(file='images/blank.png')
-        background_tab1 = Label(self.tab1, image=background_image)
-        background_tab1.place(x=0, y=0, relwidth=0.8, relheight=1)
-        # self.root.geometry('580x400')
-        # self.root.config(bg='#069c71', pady=1, padx=10)
-        # self.root.resizable(False, False)
-        # self.background_tab1 = Label(self.tab1, bg='#069c71')
+        '''This works as well, but I haven't found how to stretch it adequately. Alternatively, I can replace the image'''
+        # background_image = PhotoImage(file='images/blank.png')
+        # background_tab1 = Label(self.tab1, image=background_image)
+        # # background_tab1.place(x=0, y=0, relwidth=0.8, relheight=1)
+
+        '''Background'''
+        self.background_tab1 = Canvas(self.tab1, bg='#069c71')
+        self.background_tab1.place(x=0, y=0,  width=580, height=400)
+
 
         ## Banner:
         self.banner = Label(self.tab1, text="Dice Simulator: \n Let it roll!", font=('Monotype Corsiva', 24, 'bold'), pady=3,
@@ -132,3 +143,6 @@ class GUI():
             self.secret_banner.config(text="Whatever. Addict. :) \n Here's your \n dopamine hit.")
         else:
             self.secret_banner.config(text="")
+
+
+###########################----------------- TWO DICE -----------------###########################
