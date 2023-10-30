@@ -4,7 +4,7 @@ import random
 
 count = 0   #remember for a variable to be global, it needs to exist OUTSIDE of the class/function/file!
 
-class GUI():
+class GUI2():
     def __init__(self):
         self.root = Tk()
         self.root.title('Dice Simulator')
